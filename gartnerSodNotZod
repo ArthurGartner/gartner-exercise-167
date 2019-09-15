@@ -6,7 +6,7 @@
 //STARTDATE: September 9, 2019
 
 
-package edu.cpt167.gartner.participation5;
+package edu.cpt167.gartner.participation6;
 
 //Import the Java Scanner object
 import java.util.Scanner;
@@ -260,9 +260,9 @@ public class GartnerSodNotZod
 		System.out.printf("%s\n", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 		System.out.printf("%36s\n", "SOD SELECTION");
 		System.out.printf("%s\n", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-		System.out.printf("%s%-20s%s%-7.2f%s\n", "[A] for ", NAME_PREMIUM, "$", ITEM_A_PRICE, "PER BAG");
-		System.out.printf("%s%-20s%s%-7.2f%s\n", "[B] for ", NAME_SPECIAL, "$", ITEM_B_PRICE, "PER BAG");
-		System.out.printf("%s%-20s%s%-7.2f%s\n\n", "[C] for ", NAME_BASIC, "$", ITEM_C_PRICE, "PER BAG");
+		System.out.printf("%s%-20s%s%6.2f%10s\n", "[A] for ", NAME_PREMIUM, "$", ITEM_A_PRICE, "PER BAG");
+		System.out.printf("%s%-20s%s%6.2f%10s\n", "[B] for ", NAME_SPECIAL, "$", ITEM_B_PRICE, "PER BAG");
+		System.out.printf("%s%-20s%s%6.2f%10s\n\n", "[C] for ", NAME_BASIC, "$", ITEM_C_PRICE, "PER BAG");
 		System.out.printf("%s\n", "Please enter your selection now:");
 		//Take the first character of the user input, convert to uppercase, then assign that to the localItemSelection variable
 		localItemSelection = borrowedInput.next().toUpperCase().charAt(0);
@@ -274,9 +274,9 @@ public class GartnerSodNotZod
 			System.out.printf("%s\n", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 			System.out.printf("%36s\n", "SOD SELECTION");
 			System.out.printf("%s\n", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-			System.out.printf("%s%-20s%s%-7.2f%s\n", "[A] for ", NAME_PREMIUM, "$", ITEM_A_PRICE, "PER BAG");
-			System.out.printf("%s%-20s%s%-7.2f%s\n", "[B] for ", NAME_SPECIAL, "$", ITEM_B_PRICE, "PER BAG");
-			System.out.printf("%s%-20s%s%-7.2f%s\n\n", "[C] for ", NAME_BASIC, "$", ITEM_C_PRICE, "PER BAG");
+			System.out.printf("%s%-20s%s%6.2f%10s\n", "[A] for ", NAME_PREMIUM, "$", ITEM_A_PRICE, "PER BAG");
+			System.out.printf("%s%-20s%s%6.2f%10s\n", "[B] for ", NAME_SPECIAL, "$", ITEM_B_PRICE, "PER BAG");
+			System.out.printf("%s%-20s%s%6.2f%10s\n\n", "[C] for ", NAME_BASIC, "$", ITEM_C_PRICE, "PER BAG");
 			System.out.printf("%s\n", "Please enter your selection now:");
 			//Take the first character of the user input, convert to uppercase, then assign that to the localItemSelection variable
 			localItemSelection = borrowedInput.next().toUpperCase().charAt(0);
@@ -310,12 +310,12 @@ public class GartnerSodNotZod
 		System.out.printf("%-25s%-25s%s\n", "LABEL", "VALUE", "UNIT");
 		System.out.printf("%-25s%-25s%s\n", "~~~~~", "~~~~~", "~~~~");
 		System.out.printf("%-25s%-25s\n", "SOD NAME:", borrowedItemName);
-		System.out.printf("%-25s%-25.2f%s\n", "SOD PRICE", borrowedOrigPrice, "$/PER BAG");
-		System.out.printf("%-25s%-25.2f%s\n", "DISCOUNT PRICE:", borrowedDiscountPrice, "$/PER BAG");
-		System.out.printf("%-25s%-25d\n", "BAG QUANTITY:", borrowedHowManyEach);
-		System.out.printf("%-25s%-25.2f%s\n", "TOTAL BEFORE TAX:", borrowedSubTotal, "$");
-		System.out.printf("%-25s%-25.2f%s\n", "TAX AMOUNT:", borrowedTax, "$");
-		System.out.printf("%-25s%-25.2f%s\n\n\n", "TOTAL COST:", borrowedTotalCost, "$");
+		System.out.printf("%-17s%13.2f%27s\n", "SOD PRICE", borrowedOrigPrice, "$/PER BAG");
+		System.out.printf("%-17s%13.2f%27s\n", "DISCOUNT PRICE:", borrowedDiscountPrice, "$/PER BAG");
+		System.out.printf("%-16s%11d\n", "BAG QUANTITY:", borrowedHowManyEach);
+		System.out.printf("%-17s%13.2f%22s\n", "TOTAL BEFORE TAX:", borrowedSubTotal, "$");
+		System.out.printf("%-17s%13.2f%22s\n", "TAX AMOUNT:", borrowedTax, "$");
+		System.out.printf("%-17s%13.2f%22s\n\n\n", "TOTAL COST:", borrowedTotalCost, "$");
 		return;
 	}//END OF ITEM DISPLAY METHOD
 
@@ -331,15 +331,15 @@ public class GartnerSodNotZod
 		System.out.printf("%s\n", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 		System.out.printf("%s\n", "DISCOUNTS USED");
 		System.out.printf("%s\n", "--------------");
-		System.out.printf("%-25s%d%s\n", "MEMBER DISCOUNTS:", borrowedMemberCount, " used");
-		System.out.printf("%-25s%d%s\n", "SENIOR DISCOUNTS:", borrowedSeniorCount, " used");
-		System.out.printf("%-25s%d%s\n", "NO DISCOUNTS:", borrowedNoDiscountCount, " used");
-		System.out.printf("%-25s%d%s\n\n", "TOTAL DISCOUNTS:", totalDiscountCount, " used");
+		System.out.printf("%-27s%d%s\n", "MEMBER DISCOUNTS:", borrowedMemberCount, " used");
+		System.out.printf("%-27s%d%s\n", "SENIOR DISCOUNTS:", borrowedSeniorCount, " used");
+		System.out.printf("%-27s%d%s\n", "NO DISCOUNTS:", borrowedNoDiscountCount, " used");
+		System.out.printf("%-27s%d%s\n\n", "TOTAL DISCOUNTS:", totalDiscountCount, " used");
 		System.out.printf("%s\n", "SOD TYPE PURCHASED");
 		System.out.printf("%s\n", "------------------");
-		System.out.printf("%-25s%d\n", NAME_PREMIUM, borrowedItemACount);
-		System.out.printf("%-25s%d\n", NAME_SPECIAL, borrowedItemBCount);
-		System.out.printf("%-25s%d\n\n", NAME_BASIC, borrowedItemCCount);
+		System.out.printf("%-27s%d\n", NAME_PREMIUM, borrowedItemACount);
+		System.out.printf("%-27s%d\n", NAME_SPECIAL, borrowedItemBCount);
+		System.out.printf("%-27s%d\n\n", NAME_BASIC, borrowedItemCCount);
 		System.out.printf("%-25s%s%.2f\n\n\n", "GRAND TOTAL:", "$", borrowedGrandTotal);
 		return;
 	}//END OF FINAL REPORT DISPLAY METHOD
@@ -359,13 +359,11 @@ public class GartnerSodNotZod
 		System.out.printf("%s\n", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 		System.out.printf("%37s\n", "CUSTOMER REPORT");
 		System.out.printf("%s\n", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-		System.out.printf("%-25s%d\n", "TYPES OF SOD:", borrowedHowManyItems);
-		System.out.printf("%-25s%s%.2f\n\n", "CUSTOMER TOTAL:", "$", borrowedCustomerTotal);
+		System.out.printf("%-25s%3d%s\n", "TYPES OF SOD:", borrowedHowManyItems, " types");
+		System.out.printf("%-15s%5s%11.2f\n\n", "CUSTOMER TOTAL:", "$", borrowedCustomerTotal);
 		System.out.printf("%s\n", "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
 		return;
 	}
 
 }//END OF CLASS
-
-
 
